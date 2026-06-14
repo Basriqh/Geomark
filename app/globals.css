@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins), sans-serif;
+  --font-display: var(--font-poppins), sans-serif;
+  --font-mono: var(--font-poppins), sans-serif;
+  
+  --color-primary-brand: #5B0617;
+  --color-primary-container-brand: #7A1F2B;
+  --color-secondary-brand: #B22833;
+  --color-secondary-container-brand: #FE6065;
+  --color-background-brand: #FFF8F7;
+  --color-surface-brand: #FFF8F7;
+  --color-surface-container-brand: #FDE9E9;
+  --color-surface-container-low: #FFF0F0;
+  --color-surface-container-high: #F7E4E3;
+  --color-surface-container-highest: #F1DEDD;
+  --color-on-surface-brand: #231919;
+  --color-on-surface-variant-brand: #564242;
+  --color-outline-variant-brand: #DCC0C0;
+  --color-inverse-surface-brand: #392E2E;
+  --color-inverse-on-surface-brand: #FFEDEC;
+  --color-charcoal-brand: #1B2430;
+}
+
+/* Base style resets */
+body {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+/* Animations and helper classes requested by the user */
+.nav-link-hover {
+  position: relative;
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5B0617;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-link-hover:hover::after {
+  width: 100%;
+}
+
+.nav-link-hover-white::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-link-hover-white:hover::after {
+  width: 100%;
+}
+
+/* Card hover lift effect */
+.card-hover-lift {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(27, 36, 48, 0.08);
+  border-color: rgba(91, 6, 23, 0.2);
+}
+
+/* Image zoom effect on hover */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-element {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-zoom-container:hover .img-zoom-element {
+  transform: scale(1.06);
+}
+
+/* Button arrow transition */
+.btn-arrow-slide .arrow-icon {
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-arrow-slide:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Scroll Fade-in Keyframe utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Form input focus animation */
+.form-input-animate {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input-animate:focus {
+  border-color: #5B0617;
+  box-shadow: 0 0 0 3px rgba(91, 6, 23, 0.1);
+  outline: none;
+}
+
+/* Custom background patterns for engineering/topographic mapping style */
+.topo-bg {
+  background-image: radial-gradient(circle at 2px 2px, rgba(137, 113, 114, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.technical-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(27, 36, 48, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(27, 36, 48, 0.04) 1px, transparent 1px);
+}
+
+.survey-line-v {
+  width: 1px;
+  background-color: rgba(27, 36, 48, 0.1);
+}
+
+.survey-line-h {
+  height: 1px;
+  background-color: rgba(27, 36, 48, 0.1);
+}
+
+.technical-border {
+  border: 1px solid rgba(27, 36, 48, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 248, 247, 0.85);
+  backdrop-filter: blur(12px);
+}

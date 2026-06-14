@@ -1,0 +1,8 @@
+{
+  "name": "GEOMARK Engineering Consultants",
+  "description": "Corporate website for GEOMARK Engineering Consultants, specialising in land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
