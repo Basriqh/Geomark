@@ -82,7 +82,7 @@ export default function ProjectsPage() {
 
             <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-[#1B2430]/10 shadow-lg mt-4">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2WQIySBp0kmChZP-zGVWOILz-sU_LY381469WUPGjq2LDxd0EHQRkndwEct0MZbI6FT3sGBhZLlbX_IVpsEfutm-Amgqd1eP6J7fK-t79MRRbSRrfzmS4eYxfk2g8F5XMCkObsUsKtLSBBtK5WmKF23eX8gynpRH-7yHSCZijkNcL-SDsqnxA6H6-gjFBl5tYNbh16qr3lbVeJ2KHj2hzrpxHmZ7Onc6RyE1ICxwr2mEeiojRPWLQMdgAKFRAJ67ztHt8iXEj5vw"
+                src="/images/geomark-asphalt-highway-v2.png"
                 alt="Completed asphalt roadway along the corridor"
                 fill
                 className="object-cover"

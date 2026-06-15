@@ -131,7 +131,7 @@ export default function HomePage() {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-xl border border-[#1B2430]/10">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdJvKihsD4IDjnzFtKl88dZ6OEYue9RQYG0LmZsSBIXSK-YCF3IRC1DQWmVZ1hTnXPKlOQoA9f22bkAFOFV3pRYxsoTNB9aOFHFZP9mmDm-WheawT3KBuj9YFaUzncikRWbRDQgJseE5gG9hTyX47iaw-9uV8flPA8c6Zp3iUrmRwoqFajoSwsyJ_ptae7W5wbhhjrgeaDX4JIyLhlpjJOLi74aLAIeLj9fhzX9_MPtedGar71Xgtz8oQgwNQhREeAN05jDEnkkw"
+                src="/images/geomark-office-blueprint-v2.png"
                 alt="GEOMARK Civil Engineering Consultant reviewing blueprints"
                 fill
                 className="object-cover"

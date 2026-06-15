@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]/20 z-0" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALfM8tmB6_Ge-J2JGldDAgiuVY_xjbSt6w8scHPZb7LxImhMosMqSMeOFCFirB7qnTZ5QkKW4dM_B_i1v06XJzpzVIMkANPekxGoSEYfJEOSy2LT3PuwXG7wEgETnfIAu84TF3At_e0C4GA2KOeyNJu-dVd2HOHoAglCx4kD87x_xtElRQpcw6tGoYxmaUu1hQ2bYtVBznDupMokNI8ExjS5yeutivOXsXdTuOoyfWsQ7zyBBUoGU8VE8DWS_DyN3-BTuFpE2HyiA"
+                src="/images/geomark-drafting-overview-v2.png"
                 alt="Drafting work visual overview"
                 fill
                 className="object-cover"

@@ -130,7 +130,7 @@ export default function ServicesPage() {
             <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKj5FCPM4XCMjS6V_HwgqCUiAGI2Jxx6dWnprpmth0fZ-4TE231TQYfWjY-Co54myUjAy32zqrLTT_u5945q_AJl3Y0JovVei2Rxwuzg3l-M-1yj3zIZ3Di3iXax8qEd0Me8pcMVKKXp7hii0Lk_dz_OGDTtLpAEqUAUNlOj8b5EV-2pvwC4c-3IfR8jtvbav-ua2l2t5X_L58i54GChWD_SGpv8-VsghBXMnjxduhR_kNwziUYVz2bq5p5I5cPbPCtNg5CU2T8DA"
+                src="/images/geomark-gnss-rover-v2.png"
                 alt="Precision dual-frequency GNSS rover"
                 fill
                 className="object-cover"
