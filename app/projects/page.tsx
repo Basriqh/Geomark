@@ -2,18 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  MapPin, 
-  Layers, 
-  Compass, 
-  Calendar, 
-  UserCheck, 
-  ShieldCheck,
+import {
+  Layers,
+  Compass,
   FileCheck2,
   Table
 } from 'lucide-react';
 
-import ProjectCard from '../../components/ProjectCard';
 import MetricCard from '../../components/MetricCard';
 import CTASection from '../../components/CTASection';
 
@@ -30,16 +25,15 @@ export default function ProjectsPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI65pBttd5mdWdMJDdIMvDgvkiM7gF_nw0Qs6JCvGNPupB6KR6zJUEsykmWVmYiDc_xx471Gnpzqxj-7GIb-EzN2XS6wNToXguTMwgAmLKJbEavRwQ_IF68alWZwXFb8HcytZs_nzTGBbBbpppIjCBPYTDXlMXqbJAbdxkNa29Yw4GC_mFzdbjcUxhuzAobxeOjmzm291oD4JrN0ZkjwK90ltJNfs5a-_GmTJdu5InTFkmMLI73kUGoky1AS8OIxOT6YqWPDD56HE"
-            alt="Survey corridor layout project background"
+            src="/Images/dual-gnss-setup.jpg"
+            alt="GEOMARK engineers with dual GNSS stations on road corridor survey"
             fill
             className="opacity-50 object-cover"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#5B0617]/85" />
         </div>
-        
+
         <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto w-full text-white">
           <nav className="flex mb-8 text-white/70 font-mono text-xs uppercase tracking-widest">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -59,7 +53,7 @@ export default function ProjectsPage() {
       {/* DETAILED PROJECT INFO */}
       <section className="py-24 px-6 md:px-12 max-w-[1280px] mx-auto topo-bg" id="project-case-study">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Left Column: Technical Case study Overview */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
@@ -75,25 +69,24 @@ export default function ProjectsPage() {
                 Afgoye–Buulo Mareer Section (95 km)
               </h3>
             </div>
-            
+
             <p className="font-sans text-base text-[#564242] leading-relaxed">
               GEOMARK was commissioned to perform comprehensive land and engineering surveying, establish redundant geodetic control loops, and direct geotechnical subsurface boring logs along the 95 km Afgoye – Buulo Mareer section. This segment serves as a major trade and transport connection.
             </p>
 
             <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-[#1B2430]/10 shadow-lg mt-4">
               <Image
-                src="/images/geomark-asphalt-highway-v2.png"
-                alt="Completed asphalt roadway along the corridor"
+                src="/Images/supervisor-gnss-rover.jpg"
+                alt="GEOMARK supervisor engineer with GNSS rover on Afgoye–Baraawe corridor"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 800px"
-                referrerPolicy="no-referrer"
               />
             </div>
 
             <div className="space-y-4 pt-6">
               <h4 className="font-display text-xl font-bold text-[#5B0617]">Completed Work Scopes</h4>
-              
+
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="flex gap-3 p-4 bg-white border border-[#DCC0C0] rounded-lg">
                   <Compass className="w-5 h-5 text-[#B22833] shrink-0" />
@@ -134,7 +127,7 @@ export default function ProjectsPage() {
               <h3 className="font-display text-lg font-bold text-[#5B0617] border-b border-[#DCC0C0] pb-3">
                 Project Technical Specifications
               </h3>
-              
+
               <ul className="space-y-4 font-mono text-xs text-[#564242]">
                 <li className="flex justify-between items-start border-b border-stone-100 pb-3">
                   <span className="text-[#564242]/70 uppercase">Trunk Corridor</span>
@@ -163,7 +156,7 @@ export default function ProjectsPage() {
                   <span className="font-bold text-[#006e54]">WGS84 UT-38N // AASHTO</span>
                 </li>
               </ul>
-              
+
               <div className="p-4 bg-[#FFF8F7] border border-[#DCC0C0] text-center rounded">
                 <span className="text-[10px] text-[#564242]/70 block font-mono">EXEC_VERIFICATION</span>
                 <span className="text-xs font-bold text-[#B22833] block mt-1">100% REGULATORY ACCREDITED</span>
@@ -178,6 +171,110 @@ export default function ProjectsPage() {
             />
           </div>
 
+        </div>
+      </section>
+
+      {/* FIELD SITE PHOTOGRAPHY */}
+      <section className="py-24 bg-[#FFF8F7] border-t border-[#1B2430]/10">
+        <div className="px-6 md:px-12 max-w-[1280px] mx-auto space-y-12">
+          <div className="text-center space-y-3">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#B22833] font-bold">
+              FIELD DOCUMENTATION
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-[#5B0617]">
+              On-Site Photography
+            </h2>
+            <div className="w-20 h-1 bg-[#5B0617] mx-auto" />
+            <p className="font-sans text-sm text-[#564242] max-w-2xl mx-auto leading-relaxed pt-2">
+              Documentation captured during geodetic staking, geotechnical boring, and materials survey operations along the Afgoye – Baraawe corridor.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Photo 1: team wide corridor */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/team-gnss-corridor.jpg"
+                alt="GEOMARK team with GNSS rover on the Afgoye–Baraawe corridor"
+                fill
+                className="object-cover img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">Corridor GNSS Setup</p>
+              </div>
+            </div>
+
+            {/* Photo 2: GNSS base station */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/gnss-base-setup.jpg"
+                alt="Engineer setting up GNSS RTK base station for road corridor control"
+                fill
+                className="object-cover img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">GNSS RTK Base Station</p>
+              </div>
+            </div>
+
+            {/* Photo 3: optical level survey */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/optical-level-survey.jpg"
+                alt="GEOMARK engineer using AL24 optical level for precise elevation survey"
+                fill
+                className="object-cover img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">Precision Levelling Operations</p>
+              </div>
+            </div>
+
+            {/* Photo 4: team discussion */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/team-discussion.jpg"
+                alt="GEOMARK field engineering team coordination at GNSS station"
+                fill
+                className="object-cover img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">Team Field Coordination</p>
+              </div>
+            </div>
+
+            {/* Photo 5: CHCNAV antenna */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/chcnav-antenna.jpg"
+                alt="CHCNAV dual-frequency GNSS antenna used in precise geodetic surveys"
+                fill
+                className="object-cover object-top img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">CHCNAV Survey Equipment</p>
+              </div>
+            </div>
+
+            {/* Photo 6: optical level on road */}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border border-[#1B2430]/10 img-zoom-container group">
+              <Image
+                src="/Images/optical-level-road.jpg"
+                alt="GEOMARK surveyor with optical level on Afgoye–Baraawe road corridor"
+                fill
+                className="object-cover img-zoom-element"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest">Road Elevation Survey</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -2,18 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  CheckCircle, 
-  MapPin, 
-  Users, 
-  Target,
-  Eye,
-  Rocket
-} from 'lucide-react';
-
-import SectionHeader from '../../components/SectionHeader';
-import MetricCard from '../../components/MetricCard';
-import ProcessStep from '../../components/ProcessStep';
 import CTASection from '../../components/CTASection';
 
 export const metadata: Metadata = {
@@ -39,16 +27,15 @@ export default function AboutPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWUYC9h-Z0qqEWB9DW5R1xZAMHjyEB4U9Yws2cXR2m-d5SIzF-ZFaG_vZs2vdGjeHieaoUEm_aRm-VShs23cUFaXPTgTdukzVOnwxPoYxVAyFEf1qAX1vA2w08aN2LxVODXf1YZopf4wQeYTe2AECFklIqs5KRnNLe2FLSuGzuhB15Z9p3-U2_On53rKDOlvL_Xj-u6dj6mb0Ecfi_8-4rvK32vw2gfGwaj_JbE0m0iOK5XBkU55jllXDAezDGIqnAG1Apxp9SBg"
-            alt="Surveying fieldwork in Mogadishu"
+            src="/Images/gnss-rover-briefing.jpg"
+            alt="GEOMARK engineer with GNSS rover equipment briefing team on field survey"
             fill
             className="object-cover opacity-60"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#5B0617]/85" />
         </div>
-        
+
         <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto w-full text-white">
           <nav className="flex mb-8 text-white/70 font-mono text-xs uppercase tracking-widest">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -72,12 +59,11 @@ export default function AboutPage() {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]/20 z-0" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="/images/geomark-drafting-overview-v2.png"
-                alt="Drafting work visual overview"
+                src="/Images/optical-level-road.jpg"
+                alt="GEOMARK surveyor conducting precision levelling survey on road corridor"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 500px"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-[#5B0617]/20 z-0" />
@@ -97,7 +83,7 @@ export default function AboutPage() {
             <p className="font-sans text-sm text-[#564242]/90 leading-relaxed">
               We translate raw field constraints into verified CAD drawings, strip maps, cross-sections, and geotechnical logs that project developers, designers, and state entities can rely on explicitly.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-4 border-t border-[#1B2430]/15 pt-6 font-mono text-xs">
               <div>
                 <span className="text-[#564242]/70 block">Technical Capability</span>
@@ -143,7 +129,7 @@ export default function AboutPage() {
           </h2>
           <div className="w-20 h-1 bg-[#5B0617] mx-auto" />
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {coreValues.map((val, idx) => (
             <div key={idx} className="bg-white p-6 border border-[#1B2430]/10 hover:shadow-md transition-shadow flex flex-col justify-between rounded-lg">
@@ -165,12 +151,11 @@ export default function AboutPage() {
       <section className="relative py-32 overflow-hidden bg-[#5B0617] text-white">
         <div className="absolute inset-0 opacity-15 grayscale blend-overlay">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8C2tqJy0vZ0FUGFdvFOEh02YE7PjZlsiNepeNLBlX9_HnMqGyTUmUxbfOVw_GM7bV6dw-0IMP0YU6TQRscwHBDgdgqS8ziX8TVJbjsQsrpUPyrNk6IYbBPkRxSIYHaumf9dyc3EyGafp6uOlfDLWnAx2qCN9Ja4jDI5VPSO_DOawm2sf2DZmeNefdtLo5AInrRNu6_i6Fji5zXja5FRaWKARFNvkeyzqIH8H8CNNoMoMonptq_zRcAryHxCyNMmeVpEm0nSZC_WA"
-            alt="Structural structural blueprints overlay"
+            src="/Images/geomark-vest-logo.jpg"
+            alt="GEOMARK vest logo — Boundaries Defined. Futures Built."
             fill
             className="object-cover"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
         </div>
         <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto text-center space-y-6">

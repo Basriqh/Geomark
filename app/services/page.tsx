@@ -2,12 +2,11 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  Compass, 
-  Layers, 
-  FileText, 
-  Map, 
-  Check, 
+import {
+  Compass,
+  Layers,
+  Map,
+  Check,
   Wrench,
   Binary
 } from 'lucide-react';
@@ -75,20 +74,19 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* HERO HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6aQDvgSCthFUgGDzq5hDJOHx09EbRhV8s19039AFx2HYmbehIdTeLT5FHbOJ1MaTC_qtoc2YWvXyHkyqdhikNDSiuw_rnmkn-pxo7EWJP4zaJ5ujEfZv_402Yn-UxtAWq-RPzIzkbS36T40F2mrimSwBxIK2CHUpagS6DwaX2n5vKRROWj29BA1Mq-PYTxwOvmlNdlM1g7YCm3q0oBjYTI228LaUWnwh8-2s7nNoZvKz4FnZIvWnY_KUJX_4RhwH-HyrHssDA37U"
-            alt="Advanced geodetic surveying instrumentation"
+            src="/Images/team-gnss-corridor.jpg"
+            alt="GEOMARK team operating GNSS survey equipment on a road corridor in Somalia"
             fill
-            className="opacity-55 object-cover"
+            className="opacity-55 object-cover object-center"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#5B0617]/85" />
         </div>
-        
+
         <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto w-full text-white">
           <nav className="flex mb-8 text-white/70 font-mono text-xs uppercase tracking-widest">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -130,15 +128,14 @@ export default function ServicesPage() {
             <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="/images/geomark-gnss-rover-v2.png"
-                alt="Precision dual-frequency GNSS rover"
+                src="/Images/gnss-base-setup.jpg"
+                alt="GEOMARK engineer setting up GNSS base station on road corridor survey"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
-                referrerPolicy="no-referrer"
               />
             </div>
-            
+
             <div className="absolute bottom-6 left-6 bg-white p-4 border border-[#1B2430]/10 flex gap-4 items-center shadow-lg">
               <div className="w-12 h-12 bg-[#FFF0F0] flex items-center justify-center rounded text-[#5B0617]">
                 <Compass className="w-6 h-6" />
@@ -161,7 +158,7 @@ export default function ServicesPage() {
             <p className="font-sans text-base text-[#564242] leading-relaxed">
               Our surveying division establishes stable high-accuracy geodetic control networks using dual-frequency GNSS receivers and precise total stations to guarantee coordinate consistency on infrastructure grids.
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-4 font-sans text-sm font-semibold text-[#231919] pt-2">
               <div className="flex items-center gap-3 p-4 bg-white border border-[#DCC0C0] hover:border-[#5B0617] transition-all">
                 <Check className="w-4 h-4 text-[#B22833] shrink-0" />
@@ -180,7 +177,7 @@ export default function ServicesPage() {
                 <span>Road Alignment Setting Out</span>
               </div>
             </div>
-            
+
             <div className="pt-4">
               <TechnicalCard label="Land Survey Specs" specs={surveySpecs} />
             </div>
@@ -191,7 +188,7 @@ export default function ServicesPage() {
       {/* SERVICE 2: Geotechnical Investigation */}
       <section className="py-24 bg-[#FFF8F7] scroll-mt-20" id="geotechnical">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
+
           <div className="lg:col-span-7 space-y-6">
             <span className="font-mono text-xs uppercase tracking-widest text-[#B22833] font-bold block">
               CAPABILITY DIVISION 02
@@ -203,7 +200,7 @@ export default function ServicesPage() {
             <p className="font-sans text-base text-[#564242] leading-relaxed">
               We mitigate subsurface construction risk by managing comprehensive site boring logs, Standard Penetration Tests (SPT), test pits, and laboratory classification reports.
             </p>
-            
+
             <div className="grid sm:grid-cols-2 gap-4 font-sans text-sm font-semibold text-[#231919] pt-2">
               <div className="flex items-center gap-3 p-4 bg-white border border-[#DCC0C0] hover:border-[#5B0617] transition-all">
                 <Check className="w-4 h-4 text-[#B22833] shrink-0" />
@@ -232,12 +229,11 @@ export default function ServicesPage() {
             <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="/images/geomark-survey-instrumentation.jpg"
-                alt="Geotechnical laboratory testing"
+                src="/Images/dual-gnss-setup.jpg"
+                alt="GEOMARK engineers setting up dual GNSS station for geodetic survey"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
-                referrerPolicy="no-referrer"
               />
             </div>
             {/* Visual soil profile bar chart representation */}
@@ -257,23 +253,21 @@ export default function ServicesPage() {
           <div className="lg:col-span-5 relative space-y-6">
             <div className="aspect-[4/3] w-full rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFE1KLLk9esD36yy1zD4ypywl7uZWFAKqtMb8qeUSQAvf2L7XbpTPLHtOlssfWKTT9R8jcSJx3PCr2tYvPrHl8Uj6dlYl3q8Kbi24RrFu6ekv6hXZHkc-g1SVQ-SEXFRebP4X5tMAmBcdGLGl6cl-XUkhFVZGaT_31wA2IslSHReW0ZfmXaJQoKLRMo-BurWYBmpE939DV1Z_CTeZH8bXvM2esapSKHZ3dLkz1ereNpC5ZEG2YzNJOWJnTE07R9aKqC38L7Cfv_cw"
-                alt="Drafting architectural blueprint layouts"
+                src="/Images/team-data-controller.jpg"
+                alt="GEOMARK engineers reviewing survey data on field data controller"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
-                referrerPolicy="no-referrer"
               />
             </div>
-            
+
             <div className="aspect-[4/3] w-full rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfxmhr35bmGfhkAE7nVgMwFG-mXQ61uJG5YUtF-1FqvTgNf9szSJP8-eVFN_H6PvXmSX8FowLhrnytqRSRLL4dORJvzf1k8kroT0zHsgcH3l94MIuLEWxDcFnPpCCdEXu67aXp4UYxk2odfJaAVEro3u28pdXDgjhwbKDprxRyVU9-Ho0ILdOsbFC3w3M1ZZRhYdwat8qhsYCN2hU9f_3nvTr4Xzs9nSBRqLpuTWRE7GuirP9eJGcYh8OeTvR-VD4XrsGrJp4vBBg"
-                alt="3D Engineering alignment on computer screen"
+                src="/Images/gnss-rover-data.jpg"
+                alt="Engineer operating GNSS rover with data controller on corridor"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
-                referrerPolicy="no-referrer"
               />
             </div>
           </div>
@@ -289,7 +283,7 @@ export default function ServicesPage() {
             <p className="font-sans text-base text-[#564242] leading-relaxed">
               We translate our field and soil measurements directly into construction-ready CAD alignments, strip maps, cross-sections, and Bills of Quantities (BoQ) formatted for highway design and civil specifications.
             </p>
-            
+
             <div className="space-y-4 pt-2 font-display">
               <div className="flex gap-4 p-4 bg-white border-l-4 border-l-[#5B0617] rounded-lg border border-[#1B2430]/10 shadow-sm hover:translate-x-1 transition-transform">
                 <span className="font-mono font-bold text-[#B22833]">01</span>
@@ -321,7 +315,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SERVICE 4: Supporting Engineering Services / Materials (Borrow-pit) */}
+      {/* SERVICE 4: Supporting Engineering Services */}
       <section className="py-24 bg-white border-t border-[#1B2430]/10 scroll-mt-20" id="supporting-services">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto space-y-12">
           <div className="text-center space-y-3">
@@ -339,17 +333,16 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* Support card 1: Materials Testing */}
             <div className="bg-white border border-[#1B2430]/10 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
               <div className="relative h-48 w-full">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLsw2FVjfzWQ-eiMDrgeG9CHIDlAiafYSdQlDnJsPa1JCxU_vPU9YAwcuzSxYYqJIuqQlywrg1R6SxZfjmzr0GGMvQRHN5tXP4ywGqF9PPuc9cMVxUYmlxPx2asiiA7gXWRVG4pbqcDo4Yqq2nUHpZd6-iq3hiTpBxvivpcyWiboPhhRHcmmrQlW3PgowRk9OcmSM_8TYLp9yudPG-jRSTzK_susp4q4Kygmgm5VXx6V6pibDGik1qy_jaU"
-                  alt="Laboratory aggregates testing"
+                  src="/Images/level-staff-portrait.jpg"
+                  alt="GEOMARK engineer with precision level staff for elevation survey"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 400px"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
@@ -370,12 +363,11 @@ export default function ServicesPage() {
             <div className="bg-white border border-[#1B2430]/10 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
               <div className="relative h-48 w-full">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLt--BBLc6OdfARO-Yobn7ZNV4ng17EBTKihxrk80lCFO3G-UicFdhNC7znmh77a7w-5EZ3MH9pZenRP9tnKUrUKPQ_vEpbB68E9WzjBtoJjKomTIOGXFleghz_bqShbbRbJz4dpR6yRQhtShi3bkNvs1nD0IQOfByRiDzu9m9Vt-JJ11Q9ko9f0z9gVyIH8qbk-jg25yUQosoKZwFzIDFkTMQj_asWUjwtyYyKlfrEVXiLe9DMdGHe1ZQ"
-                  alt="UAV quadcopter mapping drone"
+                  src="/Images/chcnav-antenna.jpg"
+                  alt="CHCNAV dual-frequency GNSS antenna for high-precision geodetic surveying"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 400px"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
@@ -396,12 +388,11 @@ export default function ServicesPage() {
             <div className="bg-white border border-[#1B2430]/10 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
               <div className="relative h-48 w-full">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLtGlTnX2L5_8x3fUUDcgD78Qr2_ebF1j7XD5WRySFWVsvcyCGZeBsg4aHThSfkt-OC6w7DVmtGGp6sZEptqoiyQPjV8UCul6G504Kt_pCRYxTzObr_K7gLMyVNNId1zmRByFqEX0Qopd411TmkXczyeQiq9nO8WjaeyNmenTYL8VyS3OJqbgbH-ybUObsxRoBb-TJigZ6XfazaoyCGzAAhEe4PGzv5UrtuD28-ejF6tMY3t13juwZT2lQ0"
-                  alt="Coordinate monitoring database display"
+                  src="/Images/dl8-data-logger.jpg"
+                  alt="DL8 field data logger device used in GEOMARK geodetic operations"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 400px"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">

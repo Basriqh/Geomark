@@ -39,25 +39,23 @@ export default function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitError(null);
-    
-    // Prepared for future backend integration:
-    // try {
-    //   const response = await fetch('/api/inquiry', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data),
-    //   });
-    //   if (!response.ok) throw new Error('API submission failed');
-    //   setSubmitSuccess(true);
-    // } catch (err) {
-    //   setSubmitError('System error submitting request.');
-    // }
-
-    // Simulating stable client-side sub-seconds loading & succeed cycle
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    reset();
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => ({}));
+        throw new Error((payload as { error?: string }).error ?? 'Submission failed. Please try again.');
+      }
+      setSubmitSuccess(true);
+      reset();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'System error submitting request.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitSuccess) {
@@ -84,7 +82,7 @@ export default function ContactForm() {
   return (
     <div className="bg-white p-6 md:p-10 rounded-xl border border-[#1B2430]/10 shadow-sm">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        
+
         {submitError && (
           <div className="bg-red-50 text-red-700 p-4 rounded-lg flex items-center gap-3 border border-red-200 animate-fade-in-up">
             <AlertCircle className="w-5 h-5 shrink-0" />
@@ -93,7 +91,6 @@ export default function ContactForm() {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Full Name */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <User className="w-3.5 h-3.5 text-[#B22833]" /> Full Name *
@@ -112,7 +109,6 @@ export default function ContactForm() {
             )}
           </div>
 
-          {/* Company Name */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <Building className="w-3.5 h-3.5 text-[#B22833]" /> Company *
@@ -133,7 +129,6 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Email Address */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5 text-[#B22833]" /> Email Address *
@@ -158,7 +153,6 @@ export default function ContactForm() {
             )}
           </div>
 
-          {/* Phone Number */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-[#B22833]" /> Phone Number *
@@ -179,7 +173,6 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Service Required */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-[#B22833]" /> Service Required *
@@ -196,7 +189,6 @@ export default function ContactForm() {
             </select>
           </div>
 
-          {/* Project Location */}
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-[#B22833]" /> Project Location *
@@ -216,7 +208,6 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Project Description */}
         <div className="space-y-2">
           <label className="font-mono text-xs uppercase tracking-wider text-[#564242] font-medium flex items-center gap-1.5">
             <FileText className="w-3.5 h-3.5 text-[#B22833]" /> Project Description *

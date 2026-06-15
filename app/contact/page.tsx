@@ -1,9 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Globe, Clock, ShieldAlert } from 'lucide-react';
 
-import SectionHeader from '../../components/SectionHeader';
 import ContactForm from '../../components/ContactForm';
 
 export const metadata: Metadata = {
@@ -30,21 +30,32 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      {/* HEADER SECTION */}
-      <section className="bg-[#1B2430] py-16 border-b border-[#1B2430]/10 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 technical-grid pointer-events-none" />
-        <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto">
-          <nav className="flex mb-4 text-white/60 font-mono text-xs uppercase tracking-widest">
+      {/* HERO SECTION */}
+      <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Images/gnss-rover-briefing.jpg"
+            alt="GEOMARK engineer explaining GNSS rover setup on field operations"
+            fill
+            priority
+            className="object-cover opacity-55"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[#5B0617]/85" />
+        </div>
+
+        <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto w-full text-white">
+          <nav className="flex mb-8 text-white/70 font-mono text-xs uppercase tracking-widest">
             <Link href="/" className="hover:text-white">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-white">Contact Us</span>
           </nav>
           {/* SEO Required H1 Heading */}
-          <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight max-w-3xl">
             Contact GEOMARK
           </h1>
-          <p className="mt-2 text-sm md:text-base text-white/70 max-w-xl font-sans">
-            Have questions about land boundaries, soil classifications, or materials reports? Choose a channel below or initiate an online technical proposal request.
+          <p className="mt-4 text-base md:text-lg text-white/80 max-w-2xl font-sans leading-relaxed">
+            Have questions about land boundaries, soil classifications, or materials reports? Reach out to our team or submit a proposal request online.
           </p>
         </div>
       </section>
@@ -52,7 +63,7 @@ export default function ContactPage() {
       {/* CORE CONTACT INTERFACES */}
       <section className="py-24 px-6 md:px-12 max-w-[1280px] mx-auto topo-bg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Left Column: Headquarters and Details */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
@@ -68,6 +79,22 @@ export default function ContactPage() {
               </p>
             </div>
 
+            {/* Mogadishu headquarters image */}
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-[#1B2430]/10 shadow-md">
+              <Image
+                src="/Images/engineer-hardhat-portrait.jpg"
+                alt="GEOMARK senior engineer at Mogadishu headquarters, Office 410 Qalab-xor Tower"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 500px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1B2430]/80 to-transparent p-4">
+                <p className="font-mono text-xs text-white/90 uppercase tracking-widest">
+                  Office 410, Qalab-xor Tower — Mogadishu, SO
+                </p>
+              </div>
+            </div>
+
             {/* Verification / Office card details */}
             <div className="bg-white border border-[#1B2430]/10 rounded-xl p-8 space-y-6 shadow-sm">
               <ul className="space-y-6 text-[#564242] font-sans text-sm">
@@ -80,15 +107,15 @@ export default function ContactPage() {
                     <p className="mt-1 text-xs">Office 410, Qalab-xor Tower, Digfeer Street, Mogadishu, Somalia</p>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#FFF0F0] flex items-center justify-center text-[#B22833] shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-[#5B0617] text-sm">Phone Line</h4>
-                    <p className="mt-1 text-xs hover:underline">
-                      <a href="tel:+252611548569">+252 611 548 569</a>
+                    <p className="mt-1 text-xs">
+                      <a href="tel:+252611548569" className="hover:underline">+252 611 548 569</a>
                     </p>
                   </div>
                 </li>
@@ -99,8 +126,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-[#5B0617] text-sm">General Email</h4>
-                    <p className="mt-1 text-xs hover:underline">
-                      <a href="mailto:info@geomark.so">info@geomark.so</a>
+                    <p className="mt-1 text-xs">
+                      <a href="mailto:info@geomark.so" className="hover:underline">info@geomark.so</a>
                     </p>
                   </div>
                 </li>
@@ -111,8 +138,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-[#5B0617] text-sm">Web Portal</h4>
-                    <p className="mt-1 text-xs hover:underline">
-                      <a href="https://www.geomark.so" target="_blank" rel="noopener noreferrer">www.geomark.so</a>
+                    <p className="mt-1 text-xs">
+                      <a href="https://www.geomark.so" target="_blank" rel="noopener noreferrer" className="hover:underline">www.geomark.so</a>
                     </p>
                   </div>
                 </li>
@@ -127,7 +154,7 @@ export default function ContactPage() {
                   </div>
                 </li>
               </ul>
-              
+
               <div className="pt-4 border-t border-stone-100 flex gap-3 text-xs text-[#564242]/70 font-mono">
                 <ShieldAlert className="w-4 h-4 text-[#B22833] shrink-0 mt-0.5" />
                 <p className="leading-relaxed">All technical documents, soil logs, and survey CAD hand-offs are fully secured via encrypted off-site archives.</p>

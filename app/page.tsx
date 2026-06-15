@@ -2,19 +2,17 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  Compass, 
-  Layers, 
-  FileText, 
-  Shield, 
-  Map, 
-  DraftingCompass, 
+import {
+  Compass,
+  Layers,
+  DraftingCompass,
   Database,
+  Map,
+  Wrench,
   ArrowRight,
   Gauge,
   Workflow,
-  Wrench,
-  FolderDot
+  Shield,
 } from 'lucide-react';
 
 import SectionHeader from '../components/SectionHeader';
@@ -25,7 +23,6 @@ import ProcessStep from '../components/ProcessStep';
 import CTASection from '../components/CTASection';
 import UavIcon from '../components/UavIcon';
 
-// Page-specific metadata
 export const metadata: Metadata = {
   title: 'GEOMARK | Land Surveying & Geotechnical Consultants in Somalia',
   description:
@@ -35,36 +32,35 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div id="home-page-container">
+
       {/* 1. HERO SECTION */}
-      <section className="relative h-[85vh] flex items-center overflow-hidden bg-[#1B2430]">
+      <section className="relative h-[88vh] flex items-center overflow-hidden bg-[#1B2430]">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqRHJjeapynanDUVMYq7sP4f1IC8qSR9iNKbE2CswQYXYYemUB1rH84mmLyb77McBL0I4fwkoS4w5h1ebWyJnDpX6D1uKRguPJ6-kwT5jbTsCz74Hp2ptJbW572si5BaLw-3z7l72-fIk36OyC22uYK3Pyqa-Zb5DNpvC5ddQdoC054ecvj-Og0BACzXJbWupmggTkzcH7-qITi8_nQ-Gxtt_1kHLiKYHx9LPzazv0duoUVt-HPabsO4gnWdTRo09Tz-23w9d274g"
-            alt="GEOMARK Surveying and Geotechnical Team"
+            src="/Images/team-gnss-corridor.jpg"
+            alt="GEOMARK surveyors using GNSS equipment on a construction site in Somalia"
             fill
             priority
-            className="object-cover opacity-70"
+            className="object-cover object-center opacity-75"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1B2430]/90 via-[#1B2430]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1B2430]/95 via-[#1B2430]/60 to-[#1B2430]/20" />
         </div>
-        
+
         <div className="relative z-10 w-full px-6 md:px-12 max-w-[1280px] mx-auto">
           <div className="max-w-3xl space-y-6">
             <span className="inline-block font-mono text-xs text-[#FFF8F7] bg-[#5B0617] px-4 py-1.5 uppercase tracking-widest font-semibold rounded-sm">
               MOGADISHU HQ // GEOSPATIAL & GEOTECHNICAL
             </span>
-            
-            {/* SEO Required H1 Heading */}
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#FFF8F7] tracking-tight leading-tight">
-              Land Surveying &amp; Geotechnical Consultants in Somalia
+
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-[#FFF8F7] tracking-tight leading-tight">
+              Boundaries Defined.<br />Futures Built.
             </h1>
-            
-            <p className="font-sans text-base md:text-lg lg:text-xl text-[#FFF8F7]/90 leading-relaxed max-w-2xl">
+
+            <p className="font-sans text-base md:text-lg text-[#FFF8F7]/85 leading-relaxed max-w-2xl">
               GEOMARK provides professional land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
                 href="/services"
@@ -84,11 +80,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Diagonal grid overlay line */}
         <div className="absolute bottom-0 right-0 w-full h-full survey-grid pointer-events-none opacity-20" />
       </section>
 
-      {/* 2. SERVICES OVERVIEW (01. Our Core Competencies) */}
+      {/* 2. SERVICES OVERVIEW */}
       <section className="py-24 bg-white relative overflow-hidden" id="services-summary">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto">
           <SectionHeader
@@ -96,7 +91,7 @@ export default function HomePage() {
             title="Integrated Engineering Support"
             description="Our service lines provide accurate ground control, subsurface soil analysis, and certified design files compliant with engineering codes."
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               index="GMRK-01"
@@ -123,23 +118,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. ABOUT GEOMARK SECTION (02. About GEOMARK) */}
+      {/* 3. ABOUT GEOMARK */}
       <section className="py-24 bg-[#FFF8F7]">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
+
           <div className="lg:col-span-6 relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-xl border border-[#1B2430]/10">
               <Image
-                src="/images/geomark-office-blueprint-v2.png"
-                alt="GEOMARK Civil Engineering Consultant reviewing blueprints"
+                src="/Images/gnss-data-review.jpg"
+                alt="GEOMARK engineers reviewing GNSS survey data on the field"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 600px"
-                referrerPolicy="no-referrer"
               />
             </div>
-            
             <div className="absolute -bottom-8 -right-8 bg-[#5B0617] p-8 text-white hidden lg:block border border-[#FFF8F7]/20 shadow-lg">
               <div className="font-mono text-3xl font-bold mb-1">95 KM</div>
               <div className="font-mono text-[9px] uppercase tracking-widest text-[#FE6065] font-semibold">
@@ -161,7 +154,7 @@ export default function HomePage() {
             <p className="font-sans text-sm text-[#564242] leading-relaxed">
               Our multidisciplinary team has extensive local experience, deploying state-of-the-art surveying gear and rigorous geotechnical classification methods to verify site suitability for roads, buildings, and utility systems.
             </p>
-            
+
             <ul className="space-y-3 pt-2 font-mono text-xs text-[#231919] font-medium">
               <li className="flex items-center gap-3">
                 <Shield className="w-4 h-4 text-[#B22833] shrink-0" />
@@ -187,11 +180,11 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          
+
         </div>
       </section>
 
-      {/* 4. TECHNICAL WORKFLOW (03. Project Lifecycle) */}
+      {/* 4. TECHNICAL WORKFLOW */}
       <section className="py-24 bg-white topo-bg">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto">
           <SectionHeader
@@ -200,7 +193,7 @@ export default function HomePage() {
             align="center"
             description="Our process relies on sequential phases to ensure precise data verification and compliance with guidelines."
           />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-8">
             <ProcessStep
               stepNumber="01"
@@ -247,7 +240,7 @@ export default function HomePage() {
               VERIFIED SYSTEMS &amp; COMPILERS
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="p-6 border border-[#1B2430]/10 text-center hover:bg-[#FFF8F7] transition-all group rounded-lg">
               <Database className="w-8 h-8 text-[#B22833] mx-auto mb-4 group-hover:scale-110 transition-transform" />
@@ -285,17 +278,17 @@ export default function HomePage() {
 
       {/* 6. FEATURED CASE STUDY */}
       <section className="bg-[#1B2430] text-white py-24 relative overflow-hidden" id="featured-case-study">
-        <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXu8eyQiWwQFAQ2oaUVBiBXn1_04_6Sis3iTWFM-kzDTCqqWbqM5jVNUu2ErlQTkITmRK653L5Gft1iURnFUf7je0hWg45vMiGQh__xPioyjcqdTVngCQ21eOAiVF2ke3vGV3qWlVAKz_YHxYBfISArwW6uDlTpEnQ06h6suVL2WHTOP-_D0ags9Rqq5FIYRzR3NtA92xgRt_8VhLp_qdquWCTiOLiYMjR6Ek_g1RYB36dy9Qr_e7svCVSRrUbI86ec1sf8Wz_ALdW0"
-            alt="Survey background grid design"
+            src="/Images/geomark-vest-logo.jpg"
+            alt="GEOMARK field engineer on survey operations"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="100vw"
-            referrerPolicy="no-referrer"
           />
         </div>
-        
+        <div className="absolute inset-0 bg-[#1B2430]/80" />
+
         <div className="relative z-10 px-6 md:px-12 max-w-[1280px] mx-auto">
           <div className="max-w-4xl space-y-6">
             <span className="font-mono text-xs text-[#FE6065] font-bold block uppercase tracking-widest">
@@ -307,7 +300,7 @@ export default function HomePage() {
             <p className="font-sans text-base md:text-lg text-[#FFF8F7]/85 leading-relaxed">
               GEOMARK successfully delivered detailed engineering surveying, geodetic grid stabilization, and geotechnical borehole alignments on the 95 km Afgoye – Buulo Mareer section.
             </p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/20">
               <div className="border-l border-[#B22833] pl-6">
                 <div className="font-display text-2xl md:text-3xl font-extrabold text-[#FFF8F7]">95 KM</div>
@@ -334,7 +327,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="pt-6">
               <Link
                 href="/projects"
@@ -361,7 +354,7 @@ export default function HomePage() {
             </h2>
             <div className="w-24 h-1 bg-[#5B0617] mx-auto mt-4" />
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
               title="Geomorphic &amp; Local Expertise"
@@ -382,7 +375,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. STRONG CTA SECTION */}
+      {/* 8. CTA SECTION */}
       <CTASection />
     </div>
   );

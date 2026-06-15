@@ -13,7 +13,6 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className="py-24 px-6 md:px-12 relative overflow-hidden bg-[#5B0617] text-white">
-      {/* Topo Background Pattern for CTA */}
       <div className="absolute inset-0 opacity-10 pointer-events-none topo-bg" />
       <div className="absolute inset-0 technical-grid opacity-10 pointer-events-none" />
 
@@ -24,7 +23,7 @@ export default function CTASection({
         <p className="font-sans text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <Link
             href="/contact"

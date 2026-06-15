@@ -4,7 +4,6 @@ import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Configure Google Fonts
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -12,35 +11,45 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-// Configure Global Metadata
+const SITE_URL = process.env.APP_URL ?? 'https://www.geomark.so';
+const SITE_DESCRIPTION =
+  'GEOMARK provides professional land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.';
+
 export const metadata: Metadata = {
   title: {
     default: 'GEOMARK | Land Surveying & Geotechnical Consultants in Somalia',
     template: '%s | GEOMARK Engineering Consultants',
   },
-  description:
-    'GEOMARK provides professional land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.',
+  description: SITE_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.geomark.so',
+    canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.geomark.so',
+    url: '/',
     siteName: 'GEOMARK Engineering Consultants',
     title: 'GEOMARK | Land Surveying & Geotechnical Consultants in Somalia',
-    description:
-      'GEOMARK provides professional land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.',
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/Images/team-gnss-corridor.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'GEOMARK Engineering Consultants — Land Surveying in Somalia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GEOMARK | Land Surveying & Geotechnical Consultants in Somalia',
-    description:
-      'GEOMARK provides professional land surveying, geotechnical investigation, materials testing, and engineering documentation in Mogadishu, Somalia.',
+    description: SITE_DESCRIPTION,
+    images: ['/Images/team-gnss-corridor.jpg'],
   },
 };
 
@@ -49,7 +58,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Global Schema Structured Data
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -63,7 +71,7 @@ export default function RootLayout({
     '@id': 'https://www.geomark.so/#organization',
     'name': 'GEOMARK Engineering Consultants',
     'url': 'https://www.geomark.so',
-    'logo': 'https://www.geomark.so/favicon.ico',
+    'logo': 'https://www.geomark.so/geomark-logo.svg',
     'telephone': '+252611548569',
     'email': 'info@geomark.so',
     'address': {
@@ -86,7 +94,6 @@ export default function RootLayout({
       className={`${poppins.variable} scroll-smooth`}
     >
       <head>
-        {/* Schema Markup Injection (Plain Strings Only) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
