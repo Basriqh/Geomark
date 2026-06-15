@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import path from 'path';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -24,13 +25,8 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   output: 'standalone',
+  outputFileTracingRoot: path.join(__dirname),
   transpilePackages: ['motion'],
-  webpack: (config, { dev }) => {
-    if (dev && process.env.DISABLE_HMR === 'true') {
-      config.watchOptions = { ignored: /.*/ };
-    }
-    return config;
-  },
 };
 
 export default nextConfig;
