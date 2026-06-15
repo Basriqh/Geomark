@@ -53,7 +53,6 @@ export default function Header() {
             className="object-contain object-left"
             priority
             sizes="(max-width: 640px) 130px, (max-width: 1024px) 160px, 210px"
-            referrerPolicy="no-referrer"
           />
         </Link>
 

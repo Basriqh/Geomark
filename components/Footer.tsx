@@ -23,7 +23,6 @@ export default function Footer() {
                 width={160}
                 height={36}
                 className="object-contain"
-                referrerPolicy="no-referrer"
               />
             </div>
           </Link>

@@ -30,6 +30,7 @@ export default function AboutPage() {
             src="/Images/gnss-rover-briefing.jpg"
             alt="GEOMARK engineer with GNSS rover equipment briefing team on field survey"
             fill
+            priority
             className="object-cover opacity-60"
             sizes="100vw"
           />

@@ -16,6 +16,15 @@ function sanitize(value: unknown): string {
   return value.trim().slice(0, 2000);
 }
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 function isValidEmail(email: string): boolean {
   return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
 }
@@ -64,16 +73,26 @@ export async function POST(request: NextRequest) {
     auth: { user: smtpUser, pass: smtpPass },
   });
 
+  const e = {
+    fullName: escapeHtml(fullName),
+    companyName: escapeHtml(companyName),
+    email: escapeHtml(email),
+    phone: escapeHtml(phone),
+    serviceRequired: escapeHtml(serviceRequired),
+    projectLocation: escapeHtml(projectLocation),
+    projectDescription: escapeHtml(projectDescription),
+  };
+
   const html = `
     <h2>New Inquiry — GEOMARK Engineering Consultants</h2>
     <table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif;font-size:14px">
-      <tr><td><strong>Name</strong></td><td>${fullName}</td></tr>
-      <tr><td><strong>Company</strong></td><td>${companyName}</td></tr>
-      <tr><td><strong>Email</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
-      <tr><td><strong>Phone</strong></td><td>${phone}</td></tr>
-      <tr><td><strong>Service</strong></td><td>${serviceRequired}</td></tr>
-      <tr><td><strong>Location</strong></td><td>${projectLocation}</td></tr>
-      <tr><td><strong>Description</strong></td><td style="max-width:500px;white-space:pre-wrap">${projectDescription}</td></tr>
+      <tr><td><strong>Name</strong></td><td>${e.fullName}</td></tr>
+      <tr><td><strong>Company</strong></td><td>${e.companyName}</td></tr>
+      <tr><td><strong>Email</strong></td><td><a href="mailto:${e.email}">${e.email}</a></td></tr>
+      <tr><td><strong>Phone</strong></td><td>${e.phone}</td></tr>
+      <tr><td><strong>Service</strong></td><td>${e.serviceRequired}</td></tr>
+      <tr><td><strong>Location</strong></td><td>${e.projectLocation}</td></tr>
+      <tr><td><strong>Description</strong></td><td style="max-width:500px;white-space:pre-wrap">${e.projectDescription}</td></tr>
     </table>
   `;
 

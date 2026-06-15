@@ -28,6 +28,7 @@ export default function ProjectsPage() {
             src="/Images/dual-gnss-setup.jpg"
             alt="GEOMARK engineers with dual GNSS stations on road corridor survey"
             fill
+            priority
             className="opacity-50 object-cover"
             sizes="100vw"
           />

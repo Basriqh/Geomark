@@ -81,6 +81,7 @@ export default function ServicesPage() {
             src="/Images/team-gnss-corridor.jpg"
             alt="GEOMARK team operating GNSS survey equipment on a road corridor in Somalia"
             fill
+            priority
             className="opacity-55 object-cover object-center"
             sizes="100vw"
           />
