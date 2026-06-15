@@ -39,7 +39,7 @@ export default function HomePage() {
       <section className="relative h-[85vh] flex items-center overflow-hidden bg-[#1B2430]">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/geomark-survey-operations.jpg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqRHJjeapynanDUVMYq7sP4f1IC8qSR9iNKbE2CswQYXYYemUB1rH84mmLyb77McBL0I4fwkoS4w5h1ebWyJnDpX6D1uKRguPJ6-kwT5jbTsCz74Hp2ptJbW572si5BaLw-3z7l72-fIk36OyC22uYK3Pyqa-Zb5DNpvC5ddQdoC054ecvj-Og0BACzXJbWupmggTkzcH7-qITi8_nQ-Gxtt_1kHLiKYHx9LPzazv0duoUVt-HPabsO4gnWdTRo09Tz-23w9d274g"
             alt="GEOMARK Surveying and Geotechnical Team"
             fill
             priority
@@ -131,7 +131,7 @@ export default function HomePage() {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-xl border border-[#1B2430]/10">
               <Image
-                src="/images/geomark-field-engineer.jpg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdJvKihsD4IDjnzFtKl88dZ6OEYue9RQYG0LmZsSBIXSK-YCF3IRC1DQWmVZ1hTnXPKlOQoA9f22bkAFOFV3pRYxsoTNB9aOFHFZP9mmDm-WheawT3KBuj9YFaUzncikRWbRDQgJseE5gG9hTyX47iaw-9uV8flPA8c6Zp3iUrmRwoqFajoSwsyJ_ptae7W5wbhhjrgeaDX4JIyLhlpjJOLi74aLAIeLj9fhzX9_MPtedGar71Xgtz8oQgwNQhREeAN05jDEnkkw"
                 alt="GEOMARK Civil Engineering Consultant reviewing blueprints"
                 fill
                 className="object-cover"
@@ -287,7 +287,7 @@ export default function HomePage() {
       <section className="bg-[#1B2430] text-white py-24 relative overflow-hidden" id="featured-case-study">
         <div className="absolute inset-0 opacity-15">
           <Image
-            src="/images/geomark-gnss-road.jpg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXu8eyQiWwQFAQ2oaUVBiBXn1_04_6Sis3iTWFM-kzDTCqqWbqM5jVNUu2ErlQTkITmRK653L5Gft1iURnFUf7je0hWg45vMiGQh__xPioyjcqdTVngCQ21eOAiVF2ke3vGV3qWlVAKz_YHxYBfISArwW6uDlTpEnQ06h6suVL2WHTOP-_D0ags9Rqq5FIYRzR3NtA92xgRt_8VhLp_qdquWCTiOLiYMjR6Ek_g1RYB36dy9Qr_e7svCVSRrUbI86ec1sf8Wz_ALdW0"
             alt="Survey background grid design"
             fill
             className="object-cover"

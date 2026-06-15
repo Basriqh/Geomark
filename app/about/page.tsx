@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/geomark-gnss-closeup.jpg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWUYC9h-Z0qqEWB9DW5R1xZAMHjyEB4U9Yws2cXR2m-d5SIzF-ZFaG_vZs2vdGjeHieaoUEm_aRm-VShs23cUFaXPTgTdukzVOnwxPoYxVAyFEf1qAX1vA2w08aN2LxVODXf1YZopf4wQeYTe2AECFklIqs5KRnNLe2FLSuGzuhB15Z9p3-U2_On53rKDOlvL_Xj-u6dj6mb0Ecfi_8-4rvK32vw2gfGwaj_JbE0m0iOK5XBkU55jllXDAezDGIqnAG1Apxp9SBg"
             alt="Surveying fieldwork in Mogadishu"
             fill
             className="object-cover opacity-60"
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#5B0617]/20 z-0" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="/images/geomark-drafting-overview.jpg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALfM8tmB6_Ge-J2JGldDAgiuVY_xjbSt6w8scHPZb7LxImhMosMqSMeOFCFirB7qnTZ5QkKW4dM_B_i1v06XJzpzVIMkANPekxGoSEYfJEOSy2LT3PuwXG7wEgETnfIAu84TF3At_e0C4GA2KOeyNJu-dVd2HOHoAglCx4kD87x_xtElRQpcw6tGoYxmaUu1hQ2bYtVBznDupMokNI8ExjS5yeutivOXsXdTuOoyfWsQ7zyBBUoGU8VE8DWS_DyN3-BTuFpE2HyiA"
                 alt="Drafting work visual overview"
                 fill
                 className="object-cover"
@@ -165,7 +165,7 @@ export default function AboutPage() {
       <section className="relative py-32 overflow-hidden bg-[#5B0617] text-white">
         <div className="absolute inset-0 opacity-15 grayscale blend-overlay">
           <Image
-            src="/images/geomark-gnss-road.jpg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8C2tqJy0vZ0FUGFdvFOEh02YE7PjZlsiNepeNLBlX9_HnMqGyTUmUxbfOVw_GM7bV6dw-0IMP0YU6TQRscwHBDgdgqS8ziX8TVJbjsQsrpUPyrNk6IYbBPkRxSIYHaumf9dyc3EyGafp6uOlfDLWnAx2qCN9Ja4jDI5VPSO_DOawm2sf2DZmeNefdtLo5AInrRNu6_i6Fji5zXja5FRaWKARFNvkeyzqIH8H8CNNoMoMonptq_zRcAryHxCyNMmeVpEm0nSZC_WA"
             alt="Structural structural blueprints overlay"
             fill
             className="object-cover"

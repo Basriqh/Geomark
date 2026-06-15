@@ -79,7 +79,7 @@ export default function ServicesPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden bg-[#1B2430] py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/geomark-survey-instrumentation.jpg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6aQDvgSCthFUgGDzq5hDJOHx09EbRhV8s19039AFx2HYmbehIdTeLT5FHbOJ1MaTC_qtoc2YWvXyHkyqdhikNDSiuw_rnmkn-pxo7EWJP4zaJ5ujEfZv_402Yn-UxtAWq-RPzIzkbS36T40F2mrimSwBxIK2CHUpagS6DwaX2n5vKRROWj29BA1Mq-PYTxwOvmlNdlM1g7YCm3q0oBjYTI228LaUWnwh8-2s7nNoZvKz4FnZIvWnY_KUJX_4RhwH-HyrHssDA37U"
             alt="Advanced geodetic surveying instrumentation"
             fill
             className="opacity-55 object-cover"
@@ -130,7 +130,7 @@ export default function ServicesPage() {
             <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="/images/geomark-gnss-closeup.jpg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKj5FCPM4XCMjS6V_HwgqCUiAGI2Jxx6dWnprpmth0fZ-4TE231TQYfWjY-Co54myUjAy32zqrLTT_u5945q_AJl3Y0JovVei2Rxwuzg3l-M-1yj3zIZ3Di3iXax8qEd0Me8pcMVKKXp7hii0Lk_dz_OGDTtLpAEqUAUNlOj8b5EV-2pvwC4c-3IfR8jtvbav-ua2l2t5X_L58i54GChWD_SGpv8-VsghBXMnjxduhR_kNwziUYVz2bq5p5I5cPbPCtNg5CU2T8DA"
                 alt="Precision dual-frequency GNSS rover"
                 fill
                 className="object-cover"
@@ -232,7 +232,7 @@ export default function ServicesPage() {
             <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#5B0617]" />
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#1B2430]/10 shadow-lg">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6QZeTRESwWizMDUnX6HYkJ-d8cI8OttylZ6rfD-9gPhZt9Ai4IMo8TQKoh96FeGR4LCDU0UFh_z0jrqKm22ijsI7epJjRQaRVyhkqwihoj4O23MZCYdHF6Db1eztHk1Jo_208dyihmRqOWgZ2u94uhS-97BV-4mDvazJBUv2gOhVpyhVsTXcEVRxw0aTX2cGssx3EY3JMl-nghfbjJgG7edqKwqJB3czCH2MrDWh3ZD25PIQxQbntLm_E3kRX-ZzsowaIAX8-bxs"
+                src="/images/geomark-survey-instrumentation.jpg"
                 alt="Geotechnical laboratory testing"
                 fill
                 className="object-cover"
