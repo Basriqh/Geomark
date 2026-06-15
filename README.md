@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# GEOMARK Engineering Consultants
 
-# Run and deploy your AI Studio app
+Professional land surveying, geotechnical investigation, materials testing, and engineering documentation services for infrastructure development in Somalia.
 
-This contains everything you need to run your app locally.
+## Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/c6b3a195-b375-49f1-b1b1-bee22121b3f0
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Deployment**: Hostinger Node.js Web App (auto-deploy from GitHub)
 
-## Run Locally
+## Local Development
 
-**Prerequisites:**  Node.js
+**Prerequisites**: Node.js 22+
 
+```bash
+npm install
+cp .env.example .env.local   # fill in your values
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Environment Variables
+
+See [.env.example](.env.example) for all required variables. On Hostinger, set these in the **Environment Variables** panel.
+
+## Build & Deploy
+
+```bash
+npm run build    # production build
+npm run lint     # ESLint check
+npm start        # start production server
+```
+
+Auto-deployment is configured via Hostinger GitHub integration. Every push to `main` triggers a new deployment.
+
+## Project Structure
+
+```
+app/              # Next.js App Router pages
+components/       # Shared UI components
+hooks/            # React hooks
+lib/              # Utilities
+public/Images/    # Static images (case-sensitive on Linux)
+```
+
+## Contact
+
+**Office**: 410, Qalab-xor Tower, Digfeer Street, Mogadishu, Somalia
+**Email**: info@geomark.so
+**Phone**: +252 611 548 569
